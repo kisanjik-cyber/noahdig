@@ -357,8 +357,8 @@ function updateServicePaymentInfo() {
 }
 
 function saveOrderToBusinessDesk(formData) {
-  const today = new Date().toISOString().slice(0, 10);
-  const dateCode = today.replaceAll("-", "");
+  const submittedAt = new Date().toISOString();
+  const today = submittedAt.slice(0, 10);
   let desk;
   try {
     const storedDesk = localStorage.getItem("noahDigitalStoresDesk_v1");
@@ -371,14 +371,6 @@ function saveOrderToBusinessDesk(formData) {
     }
   } catch {
     return { requestNo: "", saved: false };
-  }
-
-  const usedNumbers = new Set(desk.requests.map(request => request.no));
-  let sequence = 1;
-  let requestNo = `NR-${dateCode}-${String(sequence).padStart(3, "0")}`;
-  while (usedNumbers.has(requestNo)) {
-    sequence += 1;
-    requestNo = `NR-${dateCode}-${String(sequence).padStart(3, "0")}`;
   }
 
   const serviceDetails = getServicePaymentDetails(formData.get("service"));
@@ -401,9 +393,18 @@ function saveOrderToBusinessDesk(formData) {
     `Supplier preference: ${formData.get("supplier") || "None provided"}`,
     `Customer notes: ${formData.get("notes") || "None"}`
   ].join("\n");
+  const id = globalThis.crypto?.randomUUID?.() || `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 10)}`;
+  const requestNo = `NDS-${submittedAt.slice(0, 4)}-${id.replace(/[^a-z\d]/gi, "").slice(-12).toUpperCase()}`;
+  const lineItems = state.cart.map(item => {
+    const product = products.find(entry => entry.id === item.id);
+    return { productId: product.id, name: product.name, description: product.description, quantity: item.quantity, unitPrice: product.price, subtotal: product.price * item.quantity };
+  });
   const request = {
-    id: globalThis.crypto?.randomUUID?.() || `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 10)}`,
+    id,
+    orderId: id,
     no: requestNo,
+    orderReference: requestNo,
+    submittedAt,
     created: today,
     updated: today,
     customer: String(formData.get("name") || "").trim(),
@@ -425,15 +426,21 @@ function saveOrderToBusinessDesk(formData) {
     orderSubtotal: goodsSubtotal,
     goodsSubtotal,
     estimatedTotal: serviceDetails.estimated,
-    source: "Bag checkout"
+    totalAmount: serviceDetails.estimated,
+    amountPaid: 0,
+    outstandingBalance: serviceDetails.estimated,
+    paymentStatus: "Unpaid",
+    lineItems,
+    source: "Main website checkout",
+    originalReference: id
   };
 
   try {
     desk.requests.push(request);
     localStorage.setItem("noahDigitalStoresDesk_v1", JSON.stringify(desk));
-    return { requestNo, saved: true };
+    return { requestNo, saved: true, request };
   } catch {
-    return { requestNo, saved: false };
+    return { requestNo, saved: false, request };
   }
 }
 
@@ -559,8 +566,8 @@ function bindEvents() {
     $("#checkout-dialog").close();
     $("#confirmation-reference").textContent = deskRecord.requestNo || "Not available";
     $("#confirmation-save-status").textContent = deskRecord.saved
-      ? "Your request is recorded in this browser's Business Desk data. Noah will verify the payment receipt before updating its status."
-      : "The request could not be saved to this browser's Business Desk data. Please include the reference in your WhatsApp message.";
+      ? "Your order is saved in this browser's Business Desk. Noah will verify any reported payment separately. This record does not sync to other devices."
+      : "This browser could not save the order. Please include the reference in WhatsApp and contact Noah directly.";
     $("#order-confirmation").showModal();
   });
   $(".checkout-close").addEventListener("click", () => $("#checkout-dialog").close());
