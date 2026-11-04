@@ -198,6 +198,7 @@ img { display: block; max-width: 100%; }
 .stock-status.pending { color: #8a6413; font-weight: 700; }
 .product-price-note { display: block; margin-top: 4px; color: #8a6413; font-size: 8px; line-height: 1.45; }
 .pending-price-reference { margin-top: 8px; padding: 7px; border-left: 2px solid #d6aa3b; color: #6f571e; background: #fbf5e3; font-size: 9px; line-height: 1.5; }
+.product-source { display: inline-block; margin-top: 6px; color: #526d52; font-size: 8px; line-height: 1.5; text-decoration: underline; text-underline-offset: 2px; }
 .product-add { width: 100%; min-height: 35px; display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 10px; border: 1px solid #dbe3d6; border-radius: 3px; color: var(--forest); background: #fff; font-size: 9px; font-weight: 700; cursor: pointer; transition: color .2s, background .2s, border .2s; }
 .product-add:hover:not(:disabled) { border-color: var(--forest); color: #fff; background: var(--forest); }
 .product-add:disabled { color: #a0a69f; background: #f4f5f1; cursor: not-allowed; }
