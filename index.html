@@ -1,145 +1,149 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-TZ">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#173b35">
-	<meta name="description" content="Shop mobile accessories, computer essentials, audio, storage and everyday technology at Noah Digital Store in Cheyo, Tabora, Tanzania.">
-	<meta name="keywords" content="Noah Digital Store Tabora, electronics shop Tabora, phone accessories Tabora, computer accessories, chargers, earphones, flash drives">
-	<meta property="og:title" content="Noah Digital Store | Smart Technology. Better Choice.">
-	<meta property="og:description" content="Discover useful technology and accessories for everyday life. Shop Noah Digital Store in Tabora.">
-	<meta property="og:type" content="website">
-	<title>Noah Digital Store | Smart Technology. Better Choice.</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="https://images.unsplash.com">
-	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
-	<script type="application/ld+json">
-		{"@context":"https://schema.org","@type":"ElectronicsStore","name":"Noah Digital Store","description":"Electronics, computer accessories, mobile accessories and technology products.","address":{"@type":"PostalAddress","addressLocality":"Cheyo, Tabora","addressCountry":"TZ"},"telephone":"+255 745 468 020","currenciesAccepted":"TZS","areaServed":"Tanzania"}
-	</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#173b67" />
+  <meta name="description" content="Shop smartphones, laptops, audio and everyday tech at NOAH Digital Store in Tanzania. Browse honest prices and helpful local support." />
+  <title>NOAH Digital Store | Everyday tech, thoughtfully picked</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="form-enhancements.css" />
+  <link rel="stylesheet" href="store-upgrade.css" />
+  <!-- Order connection: opened from the Business Desk (/store/) this is set automatically to /api/orders.
+       For the public website, put the HTTPS address of your Business Desk here, e.g. 'https://your-desk.example.com/api/orders'. -->
+  <script>window.NOAH_ORDER_API = '';</script>
+  <script src="catalog.js"></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
-	<div class="announcement" role="status">
-		<div class="announcement-inner"><span class="announcement-dot"></span><span id="announcement-message">Quality electronics & accessories in Tabora</span><a href="#shop">Explore the store <span aria-hidden="true">↗</span></a></div>
-	</div>
-	<header class="site-header" id="top">
-		<div class="header-main wrap">
-			<button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span class="menu-lines"></span></button>
-			<a class="brand" href="#top" aria-label="Noah Digital Store home"><span class="brand-mark" aria-hidden="true"><span>N</span><i></i></span><span class="brand-copy"><strong>noah<span>.</span></strong><small>DIGITAL STORE</small></span></a>
-			<form class="search-form" id="search-form" role="search">
-				<label class="sr-only" for="site-search">Search products</label>
-				<span class="search-symbol" aria-hidden="true">⌕</span>
-				<input id="site-search" type="search" autocomplete="off" placeholder="Search products, brands & accessories...">
-				<button type="submit">Search</button>
-				<div class="search-suggestions" id="search-suggestions" hidden></div>
-			</form>
-			<div class="header-actions">
-				<button class="language-toggle" type="button" data-language-toggle aria-label="Translate to Kiswahili"><span class="language-label">Translate</span><span class="language-code" aria-hidden="true">SW</span></button>
-				<button class="header-action wishlist-trigger" id="wishlist-trigger" aria-label="Open wishlist"><span class="line-icon" aria-hidden="true">♡</span><span class="action-label">Saved</span><b class="count-badge" id="wishlist-count">0</b></button>
-				<button class="header-action cart-trigger" id="cart-trigger" aria-label="Open shopping bag"><span class="line-icon" aria-hidden="true">▱</span><span class="action-label">Bag</span><b class="count-badge" id="cart-count">0</b></button>
-			</div>
-		</div>
-		<div class="nav-wrap">
-			<nav class="desktop-nav wrap" aria-label="Main navigation">
-				<a class="nav-link active" href="#top">Home</a>
-				<a class="nav-link" href="#shop">Shop all</a>
-				<a class="nav-link" href="#categories">Categories</a>
-				<a class="nav-link" href="#deals">Deals <span class="nav-new">HOT</span></a>
-				<a class="nav-link" href="#new-arrivals">New arrivals</a>
-				<a class="nav-link" href="#about">Our story</a>
-				<a class="nav-link" href="#contact">Contact</a>
-				<span class="nav-location"><span aria-hidden="true">⌖</span> Cheyo, Tabora</span>
-			</nav>
-		</div>
-	</header>
+  <div class="announcement-bar">
+    <div class="announcement-inner">
+      <span><i class="tiny-truck" aria-hidden="true">↗</i> Fast delivery across Tanzania</span>
+      <span class="announcement-separator">|</span>
+      <span>Thoughtful tech. Helpful people.</span>
+      <a href="#contact">WhatsApp support <b>+255 745 468 020</b></a>
+      <span class="announcement-location">Cheyo, Tabora</span>
+    </div>
+  </div>
 
-	<div class="mobile-menu" id="mobile-menu" hidden>
-		<div class="mobile-menu-head"><span>Explore Noah</span><button class="icon-button" id="close-menu" aria-label="Close menu">×</button></div>
-		<a href="#top">Home <span>↗</span></a><a href="#shop">Shop all <span>↗</span></a><a href="#categories">Categories <span>↗</span></a><a href="#deals">Special deals <span>↗</span></a><a href="#new-arrivals">New arrivals <span>↗</span></a><a href="#about">Our story <span>↗</span></a><a href="#contact">Contact <span>↗</span></a>
-		<div class="mobile-menu-note">Need a hand? <a href="https://wa.me/255745468020" target="_blank" rel="noreferrer">Chat with us on WhatsApp</a></div>
-	</div>
-	<div class="menu-backdrop" id="menu-backdrop" hidden></div>
+  <header class="site-header">
+    <div class="header-main">
+      <button class="mobile-menu-toggle icon-button" aria-label="Open categories" aria-expanded="false"><span class="hamburger">☰</span></button>
+      <a class="brand" href="#home" aria-label="NOAH Digital Store home">
+        <span class="brand-mark" aria-hidden="true"><span>N</span><i></i></span>
+        <span class="brand-name"><b>NOAH</b><em>Digital Store</em></span>
+      </a>
+      <form class="search-form" role="search">
+        <label class="visually-hidden" for="site-search">Search products</label>
+        <input id="site-search" type="search" placeholder="Search for products..." autocomplete="off" />
+        <button type="submit" aria-label="Search"><span class="search-glyph">⌕</span></button>
+        <div class="search-suggestions" hidden></div>
+      </form>
+      <a class="header-contact" href="tel:+255745468020"><span class="phone-symbol">◔</span><span><b>+255 745 468 020</b><small>Call us anytime</small></span></a>
+      <button class="bag-trigger" aria-label="Open shopping bag"><span class="bag-symbol">▱</span><span><b>Shopping bag</b><small><span class="bag-count">0</span> items</small></span><i class="bag-count-bubble">0</i></button>
+    </div>
+    <nav class="main-navigation" aria-label="Main navigation">
+      <div class="navigation-inner">
+        <button class="all-categories-button" aria-expanded="false"><span>☷</span> All Categories <span class="nav-chevron">⌄</span></button>
+        <div class="navigation-links">
+          <a class="active" href="#home">⌂ <span>Home</span></a>
+          <a href="#bestsellers">Shop</a>
+          <a href="#deals">Special offers</a>
+          <a href="#new-arrivals">New arrivals</a>
+          <a href="#brands">Brands</a>
+          <a href="#about">About us</a>
+          <a href="#contact">Contact us</a>
+        </div>
+        <button class="mobile-nav-close icon-button" aria-label="Close categories">×</button>
+      </div>
+      <div class="mega-menu" hidden><div class="mega-menu-inner" id="mega-categories"></div></div>
+    </nav>
+  </header>
 
-	<main>
-		<section class="hero wrap" aria-labelledby="hero-title">
-			<div class="hero-copy">
-				<div class="eyebrow"><span class="eyebrow-star">✳</span> GOOD TECH. GOOD EVERYDAY.</div>
-				<h1 id="hero-title">Technology<br>that fits <em>your life.</em></h1>
-				<p>Useful tech, thoughtful essentials, and everyday accessories. Find your next favourite at Noah Digital Store.</p>
-				<div class="hero-actions"><a class="button button-lime" href="#shop">Shop the collection <span aria-hidden="true">↗</span></a><a class="text-link" href="#categories">Explore categories <span aria-hidden="true">→</span></a></div>
-				<div class="hero-proof"><div class="proof-icon" aria-hidden="true">⌖</div><span>Proudly based in <strong>Cheyo, Tabora</strong></span><span class="proof-divider"></span><span>Shopping made simple</span></div>
-			</div>
-			<div class="hero-art" aria-label="Everyday technology essentials">
-				<div class="hero-image-main"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1000&q=85" alt="Modern smartphone ready for everyday use" fetchpriority="high"><span class="image-stamp">FIND YOUR<br>EVERYDAY TECH</span></div>
-				<div class="hero-image-small"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Wireless headphones" fetchpriority="high"></div>
-				<div class="hero-float-card"><span class="float-card-icon">✳</span><span><strong>Small things.<br>Better days.</strong><small>Explore the collection</small></span><span class="float-arrow">↗</span></div>
-				<div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-			</div>
-			<div class="hero-bottom-note"><span>01 / 05</span><span class="note-rule"></span><span>GOOD TECH FOR EVERYDAY</span><span class="hero-scroll">SCROLL TO DISCOVER ↓</span></div>
-		</section>
+  <div class="store-layout" id="home">
+    <aside class="category-sidebar" aria-label="Product categories">
+      <div class="sidebar-title"><span>SHOP BY CATEGORY</span><span class="sidebar-sparkle">✳</span></div>
+      <div class="sidebar-categories" id="sidebar-categories"></div>
+      <div class="sidebar-promo">
+        <span class="eyebrow">A GOOD DEAL AWAITS</span>
+        <h2>Shop smart.<br /><em>Save more.</em></h2>
+        <p>Everyday electronics, easy to love.</p>
+        <button class="yellow-button" data-shop-deals>See the deals <span>→</span></button>
+        <img src="images/products/studio-pro-over-2.svg" alt="Wireless headphones" loading="lazy" />
+      </div>
+    </aside>
 
-		<section class="benefit-strip" aria-label="Store highlights"><div class="wrap benefit-grid"><div><span class="benefit-symbol">◈</span><span><strong>Everyday essentials</strong><small>Tech that works for you</small></span></div><div><span class="benefit-symbol">⌖</span><span><strong>Here in Tabora</strong><small>Cheyo, Tabora, Tanzania</small></span></div><div><span class="benefit-symbol">↗</span><span><strong>Easy to order</strong><small>Shop online or WhatsApp us</small></span></div><div><span class="benefit-symbol">♡</span><span><strong>Personal support</strong><small>Questions? We're right here</small></span></div></div></section>
+    <main class="store-main">
+      <section class="hero" aria-label="Current promotions">
+        <div class="hero-content">
+          <p class="hero-kicker"><span></span><span id="hero-kicker">WELCOME TO NOAH</span></p>
+          <h1 id="hero-title">Shop smart,<br /><em>live better.</em></h1>
+          <p class="hero-subtitle" id="hero-subtitle">Phones, laptops, audio and everyday accessories — honest prices and helpful local support.</p>
+          <div class="hero-perks"><span>Reliable picks</span><b>·</b><span>Fair prices</span><b>·</b><span>Local support</span></div>
+          <button class="hero-button" data-shop-all>Find your next favourite <span>→</span></button>
+          <div class="hero-pagination"><div id="hero-dots"></div><span id="hero-number">01 <i>/ 04</i></span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-wash"></div>
+          <div class="hero-stage" id="hero-stage" aria-live="off"></div>
+          <div class="hero-roundel"><span>GOOD<br />TECH<br /><b>GOOD DAY</b></span></div>
+          <div class="hero-caption"><span class="caption-star">✳</span><span id="hero-caption">Welcome to NOAH Digital Store</span></div>
+          <button class="hero-next" aria-label="Next promotion">→</button>
+        </div>
+        <div class="hero-bottomline"><span>NOAH DIGITAL STORE</span><span>CHEYO, TABORA · TANZANIA</span></div>
+      </section>
 
-		<section class="section categories-section wrap" id="categories">
-			<div class="section-heading"><div><div class="eyebrow eyebrow-light">FIND YOUR THING</div><h2>Shop by <em>category.</em></h2></div><a class="text-link" href="#shop">View all products <span aria-hidden="true">→</span></a></div>
-			<div class="category-grid" id="category-grid"></div>
-		</section>
+      <section class="quick-categories" aria-label="Popular categories"><div class="quick-category-row" id="quick-categories"></div><button class="quick-category-all" data-all-categories><span class="dots-grid">⠿</span><b>All categories</b><span>Browse all →</span></button></section>
 
-		<section class="deal-band" id="deals">
-			<div class="wrap deal-inner"><div class="deal-copy"><div class="eyebrow"><span class="deal-pulse"></span> THE GOOD FINDS</div><h2>A little extra<br><em>for your setup.</em></h2><p>Discover selected picks at special prices. The right tech, at a price that feels right.</p><a class="button button-dark" href="#shop" data-set-deal="true">Shop selected deals <span aria-hidden="true">↗</span></a></div><div class="deal-product" id="deal-feature"></div><div class="deal-side-note"><span>GOOD THINGS<br>DON'T WAIT</span><span class="deal-star">✳</span><span>SELECTED<br>FOR YOU</span></div></div>
-		</section>
+      <section class="shopping-section" id="bestsellers">
+        <div class="section-heading"><div><span class="section-kicker">CUSTOMER FAVOURITES</span><h2>Best-selling products</h2></div><button class="section-link" data-shop-all>View all products <span>→</span></button></div>
+        <div class="product-grid" id="bestseller-grid"></div>
+      </section>
 
-		<section class="section products-section wrap" id="shop">
-			<div class="section-heading product-heading"><div><div class="eyebrow eyebrow-light">A GOOD PLACE TO START</div><h2 id="product-section-title">Popular <em>right now.</em></h2><p class="section-subtitle">Useful little upgrades, picked for everyday life.</p></div><a class="text-link desktop-only" href="#shop" id="show-all">See the whole collection <span aria-hidden="true">→</span></a></div>
-			<div class="product-controls"><div class="category-pills" id="category-pills" aria-label="Filter products by category"></div><label class="sort-control"><span>Sort by</span><select id="sort-products" aria-label="Sort products"><option value="featured">Featured</option><option value="newest">Newest</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="rating">Top rated</option></select></label></div>
-			<p class="catalog-note">Illustrative listings, prices, stock, ratings and reviews. Confirm current details and device compatibility with our team before ordering.</p>
-			<div class="search-state" id="search-state" hidden></div>
-			<div class="market-links" id="market-links" hidden aria-label="Compare prices in other markets">
-				<span>Compare live listings:</span>
-				<a id="jumia-market-link" href="#" target="_blank" rel="noreferrer">Jumia Tanzania <span aria-hidden="true">↗</span></a>
-				<a id="google-market-link" href="#" target="_blank" rel="noreferrer">Google Shopping <span aria-hidden="true">↗</span></a>
-			</div>
-			<div class="product-grid" id="product-grid" aria-live="polite"></div>
-			<div class="empty-state" id="empty-products" hidden><span>⌕</span><h3>Nothing in this little corner yet.</h3><p>Try another search or browse everything.</p><button class="button button-dark" id="reset-filters">Show all products</button></div>
-			<div class="collection-footer"><span id="product-count-label"></span><button class="text-link" id="show-more">Explore all products <span aria-hidden="true">→</span></button></div>
-		</section>
+      <section class="deal-strip" id="deals">
+        <div class="deal-copy"><span class="section-kicker">THE LITTLE EXTRAS</span><h2>Good finds.<br /><em>Better prices.</em></h2><p>Useful tech, with a little more room in your budget.</p><button class="deal-button" data-shop-deals>Shop the offers <span>→</span></button></div>
+        <div class="deal-items" id="deal-items"></div>
+        <div class="deal-burst">A GOOD<br /><b>DEAL</b><span>✳</span></div>
+      </section>
 
-		<section class="new-arrivals-section" id="new-arrivals"><div class="wrap new-arrivals-inner"><div class="new-arrival-copy"><div class="eyebrow eyebrow-light">JUST LANDED</div><h2>A fresh batch<br>of <em>good ideas.</em></h2><p>Meet new picks for your desk, your commute and everything in between.</p><a class="button button-lime" href="#shop" data-set-new="true">See what's new <span aria-hidden="true">↗</span></a><div class="arrival-index">NDS / 2026 <span>—</span> NEW THINGS, GOOD FEELING</div></div><div class="new-arrival-photo"><img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1000&q=85" alt="Compact wireless earbuds for listening on the go" loading="lazy"><span class="photo-caption">LITTLE UPGRADES<br>BIG EVERYDAY ENERGY</span><span class="photo-number">Nº 01</span></div><div class="arrival-sticker">NEW<br><span>IN</span></div></div></section>
+      <section class="shopping-section" id="new-arrivals">
+        <div class="section-heading"><div><span class="section-kicker">JUST ARRIVED</span><h2>New on the shelf</h2></div><button class="section-link" data-show-new>See what's new <span>→</span></button></div>
+        <div class="product-grid" id="new-grid"></div>
+      </section>
 
-		<section class="section why-section wrap" id="about"><div class="why-intro"><div class="eyebrow eyebrow-light">A STORE WITH YOU IN MIND</div><h2>Good technology<br>should feel <em>easy.</em></h2><p>From a cable you need today to a better setup for tomorrow, we're here to make finding useful tech a little simpler.</p><a class="text-link" href="#contact">Get to know us <span aria-hidden="true">→</span></a></div><div class="why-list"><article><span class="why-num">01</span><div><h3>Thoughtful finds</h3><p>Useful electronics and accessories for work, home and life on the move.</p></div><span class="why-mark">✳</span></article><article><span class="why-num">02</span><div><h3>Clear, fair pricing</h3><p>Prices in Tanzanian shillings, right where you need them.</p></div><span class="why-mark">↗</span></article><article><span class="why-num">03</span><div><h3>Local convenience</h3><p>Rooted in Cheyo, Tabora and serving customers across Tanzania.</p></div><span class="why-mark">⌖</span></article><article><span class="why-num">04</span><div><h3>Real human help</h3><p>Ask a question or place an order directly with our team.</p></div><span class="why-mark">♡</span></article></div></section>
+      <section class="shopping-section accessories-section" id="accessories">
+        <div class="section-heading"><div><span class="section-kicker">THE LITTLE THINGS THAT HELP</span><h2>Frequently picked accessories</h2></div><button class="section-link" data-category="Other Digital Accessories">Shop accessories <span>→</span></button></div>
+        <div class="product-grid" id="accessories-grid"></div>
+      </section>
 
-		<section class="whatsapp-section"><div class="wrap whatsapp-inner"><span class="whatsapp-mark" aria-hidden="true">↗</span><div><div class="eyebrow">PREFER A REAL CONVERSATION?</div><h2>Let's find your <em>right tech.</em></h2><p>Tell us what you're looking for. We’ll help you take it from there.</p></div><a class="button button-lime" href="https://wa.me/255745468020?text=Hello%20Noah%20Digital%20Store%2C%20I%20have%20a%20question." target="_blank" rel="noreferrer">Chat on WhatsApp <span aria-hidden="true">↗</span></a></div></section>
+      <section class="brand-strip" id="brands"><div class="brand-intro"><span class="section-kicker">GOOD COMPANY</span><h2>Brands we trust.</h2><p>Names we know, picked for everyday reliability.</p></div><div class="brand-list" id="brand-list"></div></section>
 
-		<section class="location-section wrap" id="contact"><div class="location-copy"><div class="eyebrow eyebrow-light">COME SAY HELLO</div><h2>Right here in<br><em>Tabora.</em></h2><p>Find Noah Digital Store in Cheyo. For product questions and orders, a quick message works too.</p><div class="location-details"><div><span class="location-icon">⌖</span><span><strong>Visit us</strong><small>Cheyo, Tabora, Tanzania</small></span></div><div><span class="location-icon">☎</span><span><strong>Give us a call</strong><a href="tel:+255745468020">+255 745 468 020</a></span></div></div><a class="button button-dark" href="https://maps.google.com/?q=Cheyo%2C+Tabora%2C+Tanzania" target="_blank" rel="noreferrer">Find us on the map <span aria-hidden="true">↗</span></a></div><a class="map-panel" href="https://maps.google.com/?q=Cheyo%2C+Tabora%2C+Tanzania" target="_blank" rel="noreferrer" aria-label="Open map to Cheyo, Tabora"><div class="map-grid"></div><span class="map-tag">TANZANIA · TABORA</span><span class="map-pin"><i></i></span><span class="map-label">CHEYO <small>NOAH DIGITAL STORE</small></span><span class="map-open">OPEN MAP ↗</span></a></section>
-	</main>
+      <section class="shopping-section trending-section" id="trending">
+        <div class="section-heading"><div><span class="section-kicker">IN THE MIX</span><h2>Trending right now</h2></div><button class="section-link" data-shop-all>Explore all tech <span>→</span></button></div>
+        <div class="product-grid" id="trending-grid"></div>
+      </section>
 
-	<footer class="site-footer"><div class="wrap footer-main"><div class="footer-brand"><a class="brand brand-footer" href="#top"><span class="brand-mark" aria-hidden="true"><span>N</span><i></i></span><span class="brand-copy"><strong>noah<span>.</span></strong><small>DIGITAL STORE</small></span></a><p>Smart Technology.<br>Better Choice.</p><span class="footer-place">Cheyo, Tabora, Tanzania</span></div><div class="footer-column"><h3>Explore</h3><a href="#shop">All products</a><a href="#new-arrivals">New arrivals</a><a href="#deals">Selected deals</a><a href="#categories">Categories</a></div><div class="footer-column"><h3>We're here</h3><a href="tel:+255745468020">Call +255 745 468 020</a><a href="https://wa.me/255745468020" target="_blank" rel="noreferrer">WhatsApp us ↗</a><a href="#contact">Find our store</a></div><div class="footer-note"><span class="footer-spark">✳</span><p>Good tech is the kind that simply makes your day better.</p><a href="#top">Back to the top ↑</a></div></div><div class="wrap footer-bottom"><span>© <span id="year"></span> Noah Digital Store. Made for everyday life in Tanzania.</span><span>PRICES DISPLAYED IN TZS <i>·</i> DESIGNED IN TABORA</span></div></footer>
+      <section class="about-section" id="about">
+        <div class="about-heading"><span class="section-kicker">THE NOAH DIFFERENCE</span><h2>Good shopping<br /><em>feels simple.</em></h2></div>
+        <div class="about-benefits"><article><span class="benefit-icon">✳</span><h3>Picked with purpose</h3><p>Useful, dependable tech that earns its place in your day.</p></article><article><span class="benefit-icon">↗</span><h3>Local delivery</h3><p>Delivery details are confirmed with you before dispatch.</p></article><article><span class="benefit-icon">☏</span><h3>Real human help</h3><p>Ask us about fit, setup, payment or your order.</p></article><article><span class="benefit-icon">✓</span><h3>Payment checked properly</h3><p>Our team verifies every payment. A reference alone is not confirmation.</p></article></div>
+      </section>
 
-	<nav class="mobile-bottom-nav" aria-label="Quick navigation"><a href="#top" class="bottom-nav-active"><span aria-hidden="true">⌂</span><small>Home</small></a><a href="#categories"><span aria-hidden="true">▦</span><small>Explore</small></a><button id="mobile-search-button"><span aria-hidden="true">⌕</span><small>Search</small></button><button id="mobile-cart-button"><span aria-hidden="true">▱<i id="mobile-cart-count">0</i></span><small>Bag</small></button><button class="mobile-language-toggle" type="button" data-language-toggle aria-label="Translate to Kiswahili"><span class="language-code" aria-hidden="true">SW</span><small>Translate</small></button><a href="https://wa.me/255745468020" target="_blank" rel="noreferrer"><span aria-hidden="true">↗</span><small>Chat</small></a></nav>
+      <section class="testimonial-section"><div class="testimonial-mark">“</div><div class="testimonial-copy"><span class="section-kicker">KIND WORDS, REAL PEOPLE</span><div class="testimonial-stars">★★★★★</div><blockquote>“The team helped me choose exactly what I needed. Quick replies, no pressure, and my laptop arrived safely.”</blockquote><div class="reviewer"><span class="reviewer-avatar">JM</span><span><b>Joyce M.</b><small>Dar es Salaam · Customer</small></span><i>✓ Verified order</i></div></div><div class="testimonial-aside"><span>WHAT SHOPPING<br />SHOULD FEEL LIKE.</span><b>★★★★★</b><small>4.8 average customer rating</small></div></section>
 
-	<div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
-	<aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow eyebrow-light">YOUR PICKS</span><h2>Your bag <span id="drawer-item-count">(0)</span></h2></div><button class="icon-button close-drawer" aria-label="Close shopping bag">×</button></div><div class="drawer-items" id="drawer-items"></div><div class="drawer-empty" id="drawer-empty"><span>▱</span><h3>Your bag is ready for something good.</h3><p>Explore the collection and find a little upgrade.</p><button class="button button-dark" id="drawer-shop">Explore products</button></div><div class="drawer-summary" id="drawer-summary"><div><span>Subtotal</span><strong id="cart-subtotal">TZS 0</strong></div><p>Delivery and final details can be confirmed with our team.</p><button class="button button-lime checkout-button" id="checkout-button">Continue on WhatsApp <span>↗</span></button><button class="drawer-continue close-drawer">Keep browsing</button></div></aside>
+      <section class="contact-banner" id="contact"><div><span class="section-kicker">WE'RE RIGHT HERE</span><h2>Need a little<br /><em>help choosing?</em></h2><p>Talk to a real person about a product, delivery or your order.</p></div><div class="contact-actions"><a class="contact-button" href="https://wa.me/255745468020" target="_blank" rel="noopener noreferrer"><span>☏</span> Chat with NOAH <b>→</b></a><span>Monday–Saturday · 9am–6pm EAT</span></div><div class="contact-decoration">✳</div></section>
+    </main>
+  </div>
 
-	<dialog class="checkout-dialog" id="checkout-dialog" aria-labelledby="checkout-title"><button class="icon-button checkout-close" aria-label="Close checkout">×</button><div class="checkout-content"><span class="eyebrow eyebrow-light">ONE LAST THING</span><h2 id="checkout-title">Let's get this <em>to you.</em></h2><p>Your order details will open in WhatsApp for our team to confirm with you.</p><form id="checkout-form">
-<label>Full name<input name="name" autocomplete="name" required placeholder="Your name"></label>
-<label>Phone number<input name="phone" type="tel" autocomplete="tel" required placeholder="+255 7XX XXX XXX"></label>
-<label>Service required<select id="checkout-service" name="service" required><option value="">Choose a service</option><option value="ask">Ask about a product · TSh 1,000</option><option value="find">Ask us to find a product · TSh 2,000</option><option value="buy">Buy goods and arrange delivery · TSh 5,000 + goods</option></select></label>
-<div class="checkout-payment-info" id="checkout-payment-info" aria-live="polite" hidden><strong>Lipa Number: 251268047</strong><span>Selected service: <b id="service-choice-label"></b></span><span>Service fee: <b id="service-fee-amount"></b></span><span>Estimated payment: <b id="service-total-amount"></b></span><small id="service-goods-note"></small></div>
-<label>Product category<select name="category"><option value="">Use category of items in bag</option><option value="Technology / Electronics">Technology / Electronics</option><option value="Phones and accessories">Phones and accessories</option><option value="Computers and office equipment">Computers and office equipment</option><option value="Furniture">Furniture</option><option value="Home appliances">Home appliances</option><option value="Fashion">Fashion</option><option value="Spare parts">Spare parts</option><option value="Other products">Other products</option></select></label>
-<label>Maximum budget (TZS)<input name="budget" type="number" min="0" step="100" inputmode="numeric" placeholder="Optional budget"></label>
-<label>Product specifications / details<textarea name="details" rows="3" placeholder="Model, size, colour, condition or compatibility details"></textarea></label>
-<label>Known supplier or store<input name="supplier" placeholder="Optional, if you have a preferred store"></label>
-<label>Delivery preference<select name="delivery" required><option value="">Choose one</option><option value="Local delivery in Tabora">Local delivery in Tabora</option><option value="Store pickup in Cheyo">Store pickup in Cheyo</option><option value="Discuss delivery options">Discuss delivery options</option></select></label>
-<label>Area or delivery address<input name="address" autocomplete="street-address" required placeholder="Area, street or pickup note"></label>
-<label>Payment preference<select name="payment"><option value="Discuss with store">Discuss with store</option><option value="M-Pesa">M-Pesa</option><option value="Airtel Money">Airtel Money</option><option value="Mixx by Yas">Mixx by Yas</option><option value="HaloPesa">HaloPesa</option><option value="Halotel TIPS payment">Halotel TIPS payment</option><option value="Bank payment">Bank payment</option><option value="Cash on delivery, if available">Cash on delivery, if available</option></select></label>
-<label>Additional notes for Noah<textarea name="notes" rows="3" placeholder="Anything else we should know about your request"></textarea></label>
-<fieldset class="payment-confirmation" aria-describedby="payment-confirmation-note"><legend>Have you completed the payment?</legend><label><input type="radio" name="payment-confirmed" value="yes" required> Yes, I have paid</label><label><input type="radio" name="payment-confirmed" value="no" required> No, I have not paid</label><label class="receipt-number-field" id="receipt-number-field" hidden>Transaction ID<input name="receipt-number" type="text" autocomplete="off" placeholder="Enter your Transaction ID" disabled></label><small id="payment-confirmation-note">You can send the order only after payment and its Transaction ID. Noah will verify the payment directly; this website cannot verify it.</small></fieldset>
-<button class="button button-dark checkout-submit" type="submit">Send order to Noah <span>↗</span></button><small class="checkout-disclaimer">No payment is taken on this website. Our team will confirm availability, delivery and payment directly with you.</small></form></div></dialog>
-<dialog class="checkout-dialog order-confirmation-dialog" id="order-confirmation" aria-labelledby="order-confirmation-title"><button class="icon-button checkout-close order-confirmation-close" aria-label="Close order confirmation">×</button><div class="checkout-content"><span class="eyebrow eyebrow-light">ORDER REQUEST READY</span><h2 id="order-confirmation-title">Thanks for your <em>request.</em></h2><p>Your reference is <strong id="confirmation-reference"></strong>.</p><p id="confirmation-save-status"></p><p>WhatsApp should open with your order details. Tap <strong>Send</strong> in WhatsApp to deliver the request to Noah. This page cannot confirm that WhatsApp sent it.</p><button class="button button-dark order-confirmation-close" type="button">Done</button></div></dialog>
-<dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-product-name"><button class="icon-button dialog-close" aria-label="Close product details">×</button><div id="product-dialog-content"></div></dialog>
-<div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
-<script src="translations.js"></script>
-<script src="script.js"></script>
+  <footer class="site-footer"><div class="footer-main"><div class="footer-brand"><a class="brand footer-logo" href="#home"><span class="brand-mark"><span>N</span><i></i></span><span class="brand-name"><b>NOAH</b><em>Digital Store</em></span></a><p>Good tech for real life.<br />Thoughtful picks, right here in Tanzania.</p><span class="footer-location"><i></i>Cheyo, Tabora, Tanzania</span></div><div class="footer-col"><h3>Explore</h3><a href="#bestsellers">Shop all products</a><a href="#deals">Special offers</a><a href="#new-arrivals">New arrivals</a><a href="#brands">Our brands</a></div><div class="footer-col"><h3>Here to help</h3><a href="#contact">Talk to our team</a><a href="#contact">Delivery questions</a><a href="#contact">Returns & warranty</a><a href="#contact">Payment verification</a></div><div class="footer-contact"><span class="section-kicker">LET'S TALK TECH</span><h3>Good questions<br />are always welcome.</h3><a href="tel:+255745468020">+255 745 468 020 <span>↗</span></a></div></div><div class="footer-bottom"><span>© <span id="year"></span> NOAH Digital Store</span><span>Made for everyday life in Tanzania <b>♥</b></span><button class="footer-bag">Shopping bag (<span class="bag-count">0</span>)</button></div></footer>
+
+  <div class="toast" role="status" aria-live="polite" hidden></div>
+  <div class="overlay" id="overlay" hidden></div>
+  <div class="drawer" id="bag-drawer" role="dialog" aria-modal="true" aria-label="Shopping bag" hidden></div>
+  <div class="modal" id="product-modal" role="dialog" aria-modal="true" aria-label="Product details" hidden></div>
+  <div class="modal checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-label="Checkout" hidden></div>
 </body>
 </html>
