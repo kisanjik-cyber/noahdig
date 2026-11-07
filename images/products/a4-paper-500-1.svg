@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="A4 Copy Paper 500 Sheets"><title>A4 Copy Paper 500 Sheets</title><defs><linearGradient id="a1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f2eee2"/></linearGradient><radialGradient id="a2" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f3f0e5"/></radialGradient></defs><rect width="600" height="600" fill="url(#a1)"/><circle cx="300" cy="310" r="250" fill="url(#a2)" opacity=".95"/><circle cx="300" cy="310" r="250" fill="none" stroke="#dfdbd0" stroke-width="2"/>
-  <ellipse cx="300" cy="500" rx="210" ry="14" fill="#000" opacity=".13"/>
-  <path d="M120 380 L330 420 L500 360 L290 320 Z" fill="#f3f4f6"/>
-  <path d="M120 380 V440 L330 480 V420 Z" fill="#d9dce2"/><path d="M330 420 V480 L500 420 V360 Z" fill="#c4c8d1"/>
-  <path d="M110 250 L320 290 L510 220 L300 180 Z" fill="#4083bf"/>
-  <path d="M110 250 V400 L320 440 V290 Z" fill="#2b75b8"/><path d="M320 290 V440 L510 370 V220 Z" fill="#225e93"/>
-  <g transform="translate(110 250) skewY(10)"><rect x="30" y="40" width="150" height="60" rx="8" fill="#fff" /><text x="105" y="70" text-anchor="middle" font-family="DM Sans,Segoe UI,Arial,sans-serif" font-weight="700" font-size="28" fill="#2b75b8" >A4</text><text x="105" y="92" text-anchor="middle" font-family="DM Sans,Segoe UI,Arial,sans-serif" font-weight="700" font-size="12" fill="#51607a" >80 GSM</text></g>
-  <text x="215" y="372" text-anchor="middle" font-family="DM Sans,Segoe UI,Arial,sans-serif" font-weight="700" font-size="15" fill="#fff" letter-spacing="2" transform="rotate(10 215 372)">500 SHEETS</text></svg>
