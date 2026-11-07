@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#43265d" />
+  <meta name="description" content="Local Excel-backed NOAH Digital Store order and payment management." />
+  <title>Business Desk | NOAH Digital Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nav-fix.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell" id="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="desk-brand" href="#overview" data-nav="overview"><span class="brand-mark">N</span><span><b>NOAH</b><small>Digital Store</small></span></a>
+      <div class="desk-label">BUSINESS DESK</div>
+      <nav class="side-nav" aria-label="Business desk sections">
+        <button class="nav-item active" data-nav="overview"><span>▦</span>Overview</button>
+        <div class="nav-caption">ORDERS</div>
+        <button class="nav-item" data-nav="new-orders"><span>＋</span>New Orders <i data-nav-count="newOrders">0</i></button>
+        <button class="nav-item" data-nav="confirmed"><span>✓</span>Confirmed</button>
+        <button class="nav-item" data-nav="pending"><span>◷</span>Pending</button>
+        <button class="nav-item" data-nav="completed"><span>□</span>Completed</button>
+        <button class="nav-item" data-nav="cancelled"><span>×</span>Cancelled</button>
+        <div class="nav-caption">RECORDS</div>
+        <button class="nav-item" data-nav="customers"><span>♙</span>Customers</button>
+        <button class="nav-item" data-nav="payments"><span>＄</span>Payments <i data-nav-count="pendingPayments">0</i></button>
+        <button class="nav-item" data-nav="receipts"><span>▤</span>Receipts</button>
+        <div class="nav-caption">MANAGEMENT</div>
+        <button class="nav-item" data-nav="database"><span>▣</span>Excel Database</button>
+        <button class="nav-item" data-nav="reports"><span>▥</span>Reports</button>
+        <button class="nav-item" data-nav="settings"><span>⚙</span>Settings</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="online-dot"></span><span><b>Local workbook</b><small id="db-status">Connecting…</small></span><button id="sign-out" title="Sign out" aria-label="Sign out">↗</button></div>
+    </aside>
+    <button class="mobile-shade" aria-label="Close navigation"></button>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumbs"><span>NOAH DIGITAL STORE</span><b>/</b><strong id="page-title">Overview</strong></div>
+        <div class="top-actions"><span class="today-date" id="today-date"></span><a class="outline-button storefront-link" href="/store/">Open Bag Form <span>↗</span></a><a class="outline-button storefront-link template-link" href="/NOAH_DIGITAL_STORE_DATABASE.xlsx" download>Excel template <span>↓</span></a><button class="icon-action" id="refresh-data" title="Refresh data" aria-label="Refresh data">↻</button><button class="avatar" title="Local desk">N</button></div>
+      </header>
+      <div class="page-content">
+        <section class="view active" data-view="overview">
+          <div class="page-heading"><div><p class="eyebrow" id="overview-date"></p><h1>Business at a glance.</h1><p class="subheading">A clear view of today's orders, payments and customer activity.</p></div><button class="outline-button" data-nav="new-orders">Review new orders <span>→</span></button></div>
+          <div class="stats-grid" id="stats-grid"></div>
+          <section class="content-panel overview-orders"><div class="panel-heading"><div><p class="eyebrow">ACTION NEEDED</p><h2>Recent orders</h2></div><button class="text-button" data-nav="new-orders">All orders <span>→</span></button></div><div class="table-scroll"><table><thead><tr><th>ORDER</th><th>CUSTOMER</th><th>SERVICE</th><th>SERVICE FEE</th><th>PAYMENT</th><th>STATUS</th><th></th></tr></thead><tbody id="recent-orders"></tbody></table><div class="empty-state" data-empty="recent-orders" hidden>No orders have arrived yet.</div></div></section>
+          <div class="overview-lower"><section class="content-panel"><div class="panel-heading"><div><p class="eyebrow">PAYMENT CHECK</p><h2>Needs verification</h2></div><button class="text-button" data-nav="payments">View all <span>→</span></button></div><div class="compact-list" id="pending-payment-list"></div></section><section class="content-panel"><div class="panel-heading"><div><p class="eyebrow">SERVICE MIX</p><h2>Order demand</h2></div><span class="period-label">ALL TIME</span></div><div class="service-chart" id="service-chart"></div></section></div>
+        </section>
+
+        <section class="view" data-view="new-orders"><div class="page-heading"><div><p class="eyebrow">ORDER QUEUE</p><h1>New orders</h1><p class="subheading">Review every incoming request and payment reference.</p></div></div><div class="content-panel"><div class="table-tools"><label class="search-box"><span>⌕</span><input id="order-search" type="search" placeholder="Search name, phone, product or order" /></label><select id="order-sort" aria-label="Sort orders"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="fee-high">Service fee: high to low</option></select></div><div class="table-scroll"><table><thead><tr><th>ORDER</th><th>CUSTOMER</th><th>PRODUCT</th><th>SERVICE</th><th>FEE</th><th>PAYMENT</th><th>STATUS</th><th></th></tr></thead><tbody id="new-order-rows"></tbody></table><div class="empty-state" data-empty="new-order-rows" hidden>No new orders match this view.</div></div></div></section>
+        <section class="view" data-view="confirmed"><div class="page-heading"><div><p class="eyebrow">ORDER QUEUE</p><h1>Confirmed orders</h1><p class="subheading">Confirmed requests ready for the next update.</p></div></div><div class="content-panel"><div class="table-scroll"><table><thead><tr><th>ORDER</th><th>CUSTOMER</th><th>PRODUCT</th><th>CONFIRMED</th><th>PAYMENT</th><th>STATUS</th><th></th></tr></thead><tbody id="confirmed-rows"></tbody></table></div></div></section>
+        <section class="view" data-view="pending"><div class="page-heading"><div><p class="eyebrow">REVIEW QUEUE</p><h1>Pending orders</h1><p class="subheading">Orders waiting for payment review or staff action.</p></div></div><div class="content-panel"><div class="table-scroll"><table><thead><tr><th>ORDER</th><th>CUSTOMER</th><th>SERVICE</th><th>REFERENCE</th><th>PAYMENT</th><th>ORDER STATUS</th><th></th></tr></thead><tbody id="pending-rows"></tbody></table></div></div></section>
+        <section class="view" data-view="completed"><div class="page-heading"><div><p class="eyebrow">ORDER HISTORY</p><h1>Completed orders</h1><p class="subheading">Delivered requests and closed balances.</p></div></div><div class="content-panel"><div class="table-scroll"><table><thead><tr><th>ORDER</th><th>CUSTOMER</th><th>PRODUCT</th><th>SERVICE FEE</th><th>COMPLETED</th><th>RECEIPT</th><th></th></tr></thead><tbody id="completed-rows"></tbody></table></div></div></section>
+        <section class="view" data-view="cancelled"><div class="page-heading"><div><p class="eyebrow">ORDER HISTORY</p><h1>Cancelled orders</h1><p class="subheading">Cancelled requests remain recorded for audit and reporting.</p></div></div><div class="content-panel"><div class="table-scroll"><table><thead><tr><th>ORDER</th><th>CUSTOMER</th><th>SERVICE</th><th>PAYMENT</th><th>CANCELLED</th><th></th></tr></thead><tbody id="cancelled-rows"></tbody></table></div></div></section>
+
+        <section class="view" data-view="customers"><div class="page-heading"><div><p class="eyebrow">CUSTOMER DIRECTORY</p><h1>Customers</h1><p class="subheading">A deduplicated record of everyone who has placed a request.</p></div><label class="search-box"><span>⌕</span><input id="customer-search" type="search" placeholder="Search customers" /></label></div><div class="content-panel"><div class="table-scroll"><table><thead><tr><th>CUSTOMER</th><th>PHONE</th><th>EMAIL</th><th>ORDERS</th><th>LAST ORDER</th></tr></thead><tbody id="customer-rows"></tbody></table></div></div></section>
+        <section class="view" data-view="payments"><div class="page-heading"><div><p class="eyebrow">PAYMENT CONTROL</p><h1>Payment verification</h1><p class="subheading">A reference alone is not proof of payment. Verify against TIPS before confirming.</p></div><label class="search-box"><span>⌕</span><input id="payment-search" type="search" placeholder="Search reference, customer or order" /></label></div><div class="notice-banner"><span>!</span><p><b>Manual check required</b> Verify the fee separately from any product balance. TIPS verification is not automated.</p></div><div class="content-panel"><div class="table-scroll"><table><thead><tr><th>ORDER / CUSTOMER</th><th>REFERENCE</th><th>METHOD</th><th>SERVICE FEE</th><th>PRODUCT BALANCE</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody id="payment-rows"></tbody></table></div></div></section>
+        <section class="view" data-view="receipts"><div class="page-heading"><div><p class="eyebrow">DOCUMENTS</p><h1>Receipt management</h1><p class="subheading">Download or reprint a receipt with its current payment verification status.</p></div></div><div class="content-panel"><div class="table-scroll"><table><thead><tr><th>RECEIPT</th><th>ORDER</th><th>CUSTOMER</th><th>SERVICE FEE</th><th>PAYMENT STATUS</th><th>DATE</th><th></th></tr></thead><tbody id="receipt-rows"></tbody></table></div></div></section>
+
+        <section class="view" data-view="database"><div class="page-heading"><div><p class="eyebrow">LOCAL EXCEL STORAGE</p><h1>Database management</h1><p class="subheading">The workbook on this computer is the primary business record.</p></div><a class="primary-button link-button" href="/api/export">Download Excel database <span>↓</span></a></div><div class="database-callout"><span>▣</span><div><b id="database-name">NOAH_DIGITAL_STORE_DATABASE.xlsx</b><small id="database-location">Loading local path…</small></div><span class="database-safe"><i></i>Local file</span></div><div class="database-grid"><section class="content-panel"><div class="panel-heading"><div><p class="eyebrow">DATA TRANSFER</p><h2>Import database</h2></div></div><p class="panel-copy">Upload a valid NOAH workbook. New rows are merged by record ID; existing unrelated records are preserved.</p><form id="import-form" class="upload-form"><label class="file-picker"><span>Choose .xlsx file</span><input type="file" name="database" accept=".xlsx" required /></label><button class="primary-button" type="submit">Validate and import <span>→</span></button><p class="form-error" id="import-error"></p></form></section><section class="content-panel"><div class="panel-heading"><div><p class="eyebrow">AUTOMATIC RECOVERY</p><h2>Workbook backups</h2></div><button class="text-button" id="refresh-backups">Refresh</button></div><p class="panel-copy">A dated workbook copy is created before each database update. The latest 50 are retained.</p><div class="backup-list" id="backup-list"></div></section></div><div class="notice-banner subdued"><span>i</span><p>The workbook is stored locally on this computer. Website orders synchronize only while this desk is running and reachable through a secured HTTPS or VPN connection.</p></div></section>
+        <section class="view" data-view="reports"><div class="page-heading"><div><p class="eyebrow">BUSINESS INTELLIGENCE</p><h1>Reports & analytics</h1><p class="subheading">Service-fee collections and product balances from the Excel database.</p></div><a class="outline-button link-button" href="/api/export">Export workbook <span>↓</span></a></div><div class="report-periods"><button class="period-tab active" data-period="day">Daily</button><button class="period-tab" data-period="week">Weekly</button><button class="period-tab" data-period="month">Monthly</button><button class="period-tab" data-period="year">Yearly</button></div><div class="stats-grid report-stats" id="report-stats"></div><div class="content-panel"><div class="panel-heading"><div><p class="eyebrow">TRENDS</p><h2>Recent activity</h2></div></div><div class="table-scroll"><table><thead><tr><th>PERIOD</th><th>ORDERS</th><th>VERIFIED FEES</th><th>PENDING FEES</th><th>PRODUCT BALANCE</th><th>COMPLETED</th></tr></thead><tbody id="report-rows"></tbody></table></div></div></section>
+        <section class="view" data-view="settings"><div class="page-heading"><div><p class="eyebrow">CONFIGURATION</p><h1>System settings</h1><p class="subheading">Current service fees and local connection configuration.</p></div></div><div class="database-grid"><section class="content-panel"><div class="panel-heading"><div><p class="eyebrow">SERVICE MENU</p><h2>Fees and categories</h2></div></div><div class="settings-services"><div><b>Product Inquiry and Seller/Shop Price Research</b><strong>TSh 1,000</strong></div><div><b>Product Price Research</b><strong>TSh 2,000</strong></div><div><b>Product Sourcing and Delivery</b><strong>TSh 5,000</strong></div></div></section><section class="content-panel"><div class="panel-heading"><div><p class="eyebrow">PAYMENT</p><h2>TIPS configuration</h2></div></div><div class="setting-row"><span>TIPS number</span><b>251268047</b></div><div class="setting-row"><span>Verification</span><b>Manual administrator review</b></div><div class="setting-row"><span>Pay on Delivery</span><b>Product sourcing only</b></div></section></div><section class="content-panel security-panel"><div class="panel-heading"><div><p class="eyebrow">SECURITY & SYNC</p><h2>Local connection</h2></div></div><p class="panel-copy">Administrator authentication is enabled. The desk listens on the local computer by default. To receive orders from the published website, configure an HTTPS/VPN ingress and exact allowed website origin in the Windows environment before starting the server.</p><div class="setting-row"><span>Excel file</span><b id="settings-database">Local workbook</b></div><div class="setting-row"><span>Last connection</span><b id="connection-time">—</b></div></section></section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="order-modal" hidden><section class="order-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><div class="dialog-header"><div><p class="eyebrow">ORDER DETAILS</p><h2 id="dialog-title">Order</h2></div><button class="close-icon" data-close-dialog aria-label="Close order details">×</button></div><div id="order-detail"></div></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

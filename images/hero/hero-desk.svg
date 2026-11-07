@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="900" height="650" role="img" aria-label="NOAH hero desk"><title>NOAH hero desk</title><defs><linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e4eef8"/><stop offset="1" stop-color="#f7f5eb"/></linearGradient><linearGradient id="a2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b6fd6"/><stop offset="1" stop-color="#8fd0ff"/></linearGradient><linearGradient id="a3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6e9ed"/><stop offset=".45" stop-color="#c8ced8"/><stop offset=".55" stop-color="#b0b5be"/><stop offset="1" stop-color="#d9dde4"/></linearGradient><linearGradient id="a4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ebedf3"/><stop offset="1" stop-color="#a2a5a9"/></linearGradient><linearGradient id="a5" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#414962"/><stop offset="1" stop-color="#1d2234"/></linearGradient><linearGradient id="a6" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1d2234"/><stop offset="1" stop-color="#414962"/></linearGradient><pattern id="a7" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.8" fill="#131a30"/></pattern><linearGradient id="a8" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f4e7a"/><stop offset="1" stop-color="#1d294b"/></linearGradient><linearGradient id="a9" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4a62a"/><stop offset="1" stop-color="#926419"/></linearGradient><linearGradient id="a10" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4a62a"/><stop offset="1" stop-color="#926419"/></linearGradient></defs><rect width="900" height="650" fill="url(#a1)"/><circle cx="450" cy="340" r="270" fill="#fff" fill-opacity=".6"/><circle cx="450" cy="340" r="270" fill="none" stroke="#244f82" stroke-opacity=".35" stroke-width="3" stroke-dasharray="6 12"/><g transform="translate(400 290) rotate(-2) scale(1.05) translate(-300 -300)"><rect x="122" y="120" width="356" height="246" rx="16" fill="#5a5d61" />
+  <rect x="132" y="130" width="336" height="222" rx="8" fill="url(#a2)" />
+  <circle cx="380" cy="180" r="90" fill="#fff" opacity=".14"/>
+  <rect x="150" y="148" width="120" height="14" rx="7" fill="#fff" opacity=".5"/><rect x="150" y="172" width="80" height="9" rx="4.5" fill="#fff" opacity=".3"/>
+  <rect x="300" y="230" width="150" height="90" rx="10" fill="#fff" opacity=".2"/><rect x="150" y="230" width="130" height="90" rx="10" fill="#000" opacity=".15"/>
+  <circle cx="300" cy="124" r="2.5" fill="#0a0c13" />
+  <path d="M64 372 H536 L520 396 Q518 404 508 404 H92 Q82 404 80 396 Z" fill="url(#a3)"/>
+  <path d="M64 372 H536 L532 380 H68 Z" fill="#e4e7ec"/>
+  <rect x="244" y="372" width="112" height="10" rx="5" fill="#969ba2" />
+  <path d="M96 404 H504 L498 414 Q496 418 490 418 H110 Q104 418 102 414 Z" fill="#8c9097"/></g><g transform="translate(690 460) rotate(8) scale(0.42) translate(-300 -300)">
+  <ellipse cx="300" cy="500" rx="130" ry="16" fill="#000" opacity=".15"/>
+  <path d="M300 70 C 410 70, 440 190, 440 330 C 440 450, 390 510, 300 510 C 210 510, 160 450, 160 330 C 160 190, 190 70, 300 70 Z" fill="url(#a4)"/>
+  <path d="M300 70 V 260" stroke="#747679" stroke-width="4"/>
+  <path d="M170 260 Q 300 300 430 260" fill="none" stroke="#747679" stroke-width="4"/>
+  <rect x="284" y="130" width="32" height="76" rx="16" fill="#2b75b8" /><rect x="284" y="130" width="32" height="76" rx="16" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M205 140 C 220 100, 255 80, 285 76 L 280 250 Q 215 255 195 240 Z" fill="#fff" opacity="0.22"/>
+  <text x="300" y="420" text-anchor="middle" font-family="DM Sans,Segoe UI,Arial,sans-serif" font-weight="700" font-size="22" fill="#fff" opacity=".55" letter-spacing="6">NOAH</text></g><g transform="translate(170 470) rotate(-6) scale(0.5) translate(-300 -300)">
+  <path d="M130 330 V290 C130 150 200 90 300 90 C400 90 470 150 470 290 V330" fill="none" stroke="#1d2234" stroke-width="30" stroke-linecap="round"/>
+  <path d="M130 330 V290 C130 150 200 90 300 90 C400 90 470 150 470 290 V330" fill="none" stroke="#2c3550" stroke-width="22" stroke-linecap="round"/>
+  <path d="M150 215 C165 150 220 112 300 112" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="5" stroke-linecap="round"/>
+  <rect x="86" y="290" width="96" height="170" rx="44" fill="url(#a5)" /><rect x="418" y="290" width="96" height="170" rx="44" fill="url(#a6)" />
+  <rect x="160" y="304" width="40" height="142" rx="20" fill="#161a24" /><rect x="400" y="304" width="40" height="142" rx="20" fill="#161a24" />
+  <circle cx="134" cy="375" r="16" fill="#161b28" /><circle cx="466" cy="375" r="16" fill="#161b28" /></g><g transform="translate(560 560) rotate(0) scale(0.34) translate(-300 -300)"><ellipse cx="300" cy="480" rx="210" ry="20" fill="#000" opacity=".14"/>
+  <rect x="100" y="190" width="400" height="270" rx="135" fill="url(#a8)" />
+  <rect x="160" y="190" width="280" height="270" rx="0" fill="url(#a7)" />
+  <rect x="100" y="190" width="80" height="270" rx="40" fill="url(#a9)" /><rect x="420" y="190" width="80" height="270" rx="40" fill="url(#a10)" />
+  <rect x="165" y="232" width="270" height="186" rx="0" fill="none" stroke="#6a7597" stroke-opacity=".0"/>
+  <path d="M170 215 H430" stroke="#fff" stroke-opacity=".2" stroke-width="6" stroke-linecap="round"/>
+  <rect x="260" y="400" width="80" height="26" rx="13" fill="#11141b" /><text x="300" y="419" text-anchor="middle" font-family="DM Sans,Segoe UI,Arial,sans-serif" font-weight="700" font-size="16" fill="#e9ecf1" >+   ●   −</text><circle cx="300" cy="210" r="5" fill="#f4a62a" />
+  <path d="M150 190 C 150 110, 450 110, 450 190" fill="none" stroke="#17203b" stroke-width="12" stroke-linecap="round"/></g></svg>
