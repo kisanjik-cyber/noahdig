@@ -1,8 +1,0 @@
-.side-nav{display:flex;flex-direction:column;gap:3px;overflow-x:hidden;overflow-y:auto;flex:1 1 0;min-height:0}.nav-item{min-height:38px;flex:0 0 38px}.nav-caption{flex:0 0 auto}.sidebar-bottom{flex:0 0 auto}.nav-item{display:flex;flex-shrink:0;align-items:center;gap:12px;width:100%;min-height:38px;padding:0 11px;border:0;border-radius:5px;background:transparent;color:#d4cbdd;text-align:left;font-size:11px;font-weight:600}.nav-item>span{display:grid;place-items:center;width:15px;color:#b8a9c5;font-size:14px}.nav-item:hover,.nav-item.active{background:#59456f;color:#fff}.nav-item.active>span{color:#fff}.nav-item i{display:grid;place-items:center;min-width:19px;height:18px;margin-left:auto;border-radius:12px;background:#785b91;color:#fff;font-size:9px;font-style:normal}.storefront-link{min-height:29px;padding:0 9px;font-size:9px;white-space:nowrap}
-
-.wa-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:0 15px;border-radius:4px;background:#25d366;color:#073b1d;font-size:11px;font-weight:800;text-decoration:none;box-shadow:0 2px 8px #25d3664d}
-.wa-button:hover{background:#1fbf5b}
-.wa-mini{display:inline-block;padding:5px 8px;border-radius:3px;background:#25d366;color:#073b1d;font-size:9px;font-weight:800;text-decoration:none}
-.wa-banner{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:18px 20px 0;padding:14px 16px;border:1px solid #bfe9d0;border-radius:6px;background:#effaf3}
-.wa-banner div{display:grid;gap:4px}.wa-banner b{color:#16603f;font-size:12px}.wa-banner small{color:#4d7f65;font-size:10px}
-.row-actions{display:flex;gap:6px;align-items:center}
